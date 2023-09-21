@@ -1,3 +1,4 @@
+
 cmake_minimum_required(VERSION 3.26)
 project(Linked_list_void C)
 
