@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int main() {
+void ex2() {
     string input;
     cout << "Enter a string: ";
     // getline(std::cin, input);
@@ -41,6 +41,29 @@ int main() {
             // or we just go up by 1 if there was no number
             i++;
         }
+    }
+}
+
+int main() {
+    string input = "aa ba";
+    int len;
+
+    int end = input.length() - 1;
+    int start = input.length() - 1;
+
+    int i = input.length() - 1;
+    while (i >= 0) {
+
+        if (input.at(i) == ' ' || i == 0) {
+            start = i + 1;  // start is now at 'd'
+            len = end - start + 1;
+
+            cout << "word: (" << start << ", " << end << ") with length = " << len << endl;
+
+            end = i - 1;  // end is now at ' '
+        }
+
+        i--;
     }
 
     return 0;
